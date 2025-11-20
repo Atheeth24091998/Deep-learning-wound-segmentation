@@ -1,0 +1,359 @@
+### Starting TaskPrologue of job 922533 on tg06b at Mon 28 Oct 2024 07:27:23 AM CET
+Running on cores 2-3,10-11,16,19,26-27 with governor ondemand
+Mon Oct 28 07:27:23 2024       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.28.03              Driver Version: 560.28.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA GeForce RTX 2080 Ti     On  |   00000000:3B:00.0 Off |                  N/A |
+| 27%   28C    P8              9W /  250W |       1MiB /  11264MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+### Finished TaskPrologue
+
+/home/hpc/iwso/iwso151h/.conda/envs/wound_segmentation/lib/python3.10/site-packages/albumentations/__init__.py:13: UserWarning: A new version of Albumentations is available: 1.4.20 (you have 1.4.18). Upgrade using: pip install -U albumentations. To disable automatic update checks, set the environment variable NO_ALBUMENTATIONS_UPDATE to 1.
+  check_for_updates()
+/home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/FPN_combined_single_nonfixed_4.py:156: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.global_model.load_state_dict(torch.load(global_model_save_path, map_location=device))
+/home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/FPN_combined_single_nonfixed_4.py:157: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  self.local_model.load_state_dict(torch.load(local_model_save_path, map_location=device))
+/home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/FPN_combined_single_nonfixed_4.py:125: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  original_mask = torch.tensor(mask).clone()  # Convert mask to tensor and then clone it
+/home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/FPN_combined_single_nonfixed_4.py:126: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  original_image = torch.tensor(image).clone()
+Epoch 1/100
+Training Loss: 0.030194929452857587
+Test Metrics at after Epoch 1: Precision: 0.7708, Recall: 0.7374, IoU: 0.5866, Dice:0.7249
+Epoch 2/100
+Training Loss: 0.023916098430301205
+Test Metrics at after Epoch 2: Precision: 0.6373, Recall: 0.8472, IoU: 0.5533, Dice:0.7002
+Epoch 3/100
+Training Loss: 0.020965854148145276
+Test Metrics at after Epoch 3: Precision: 0.8015, Recall: 0.6055, IoU: 0.4971, Dice:0.6413
+Epoch 4/100
+Training Loss: 0.01876081776043231
+Test Metrics at after Epoch 4: Precision: 0.7604, Recall: 0.8596, IoU: 0.6651, Dice:0.7883
+Epoch 5/100
+Training Loss: 0.018815076590111158
+Test Metrics at after Epoch 5: Precision: 0.6938, Recall: 0.8301, IoU: 0.5893, Dice:0.7313
+Epoch 6/100
+Training Loss: 0.0189316938960492
+Test Metrics at after Epoch 6: Precision: 0.8304, Recall: 0.6142, IoU: 0.5212, Dice:0.6599
+Epoch 7/100
+Training Loss: 0.018783687279945373
+Test Metrics at after Epoch 7: Precision: 0.8158, Recall: 0.6583, IoU: 0.5464, Dice:0.6847
+Epoch 8/100
+Training Loss: 0.0189837864411976
+Test Metrics at after Epoch 8: Precision: 0.8387, Recall: 0.7424, IoU: 0.6276, Dice:0.7576
+Epoch 9/100
+Training Loss: 0.017931733176940017
+Test Metrics at after Epoch 9: Precision: 0.8463, Recall: 0.6912, IoU: 0.5862, Dice:0.7238
+Epoch 10/100
+Training Loss: 0.018241190478544344
+Test Metrics at after Epoch 10: Precision: 0.8050, Recall: 0.7040, IoU: 0.5731, Dice:0.7114
+Epoch 11/100
+Training Loss: 0.019015697132081094
+Test Metrics at after Epoch 11: Precision: 0.8226, Recall: 0.7288, IoU: 0.6074, Dice:0.7435
+Epoch 12/100
+Training Loss: 0.01772826040314153
+Test Metrics at after Epoch 12: Precision: 0.6887, Recall: 0.8785, IoU: 0.6184, Dice:0.7525
+Epoch 13/100
+Training Loss: 0.017903426577421753
+Test Metrics at after Epoch 13: Precision: 0.6863, Recall: 0.8955, IoU: 0.6302, Dice:0.7605
+Epoch 14/100
+Training Loss: 0.018322486562108754
+Test Metrics at after Epoch 14: Precision: 0.7659, Recall: 0.8236, IoU: 0.6409, Dice:0.7705
+Epoch 15/100
+Training Loss: 0.01722599769650836
+Test Metrics at after Epoch 15: Precision: 0.8641, Recall: 0.6369, IoU: 0.5546, Dice:0.6931
+Epoch 16/100
+Training Loss: 0.016661176044079993
+Test Metrics at after Epoch 16: Precision: 0.7955, Recall: 0.7847, IoU: 0.6343, Dice:0.7645
+Epoch 17/100
+Training Loss: 0.017491570264665468
+Test Metrics at after Epoch 17: Precision: 0.7612, Recall: 0.8009, IoU: 0.6211, Dice:0.7519
+Epoch 18/100
+Training Loss: 0.018204802807157087
+Test Metrics at after Epoch 18: Precision: 0.7241, Recall: 0.8570, IoU: 0.6321, Dice:0.7598
+Epoch 19/100
+Training Loss: 0.018346861470490694
+Test Metrics at after Epoch 19: Precision: 0.8369, Recall: 0.5868, IoU: 0.4947, Dice:0.6317
+Epoch 20/100
+Training Loss: 0.01752289194105701
+Test Metrics at after Epoch 20: Precision: 0.8647, Recall: 0.5989, IoU: 0.5252, Dice:0.6622
+Epoch 21/100
+Training Loss: 0.018504282299692584
+Test Metrics at after Epoch 21: Precision: 0.8710, Recall: 0.2916, IoU: 0.2659, Dice:0.3811
+Epoch 22/100
+Training Loss: 0.01923853134962194
+Test Metrics at after Epoch 22: Precision: 0.8487, Recall: 0.4083, IoU: 0.3639, Dice:0.5009
+Epoch 23/100
+Training Loss: 0.018203421058415464
+Test Metrics at after Epoch 23: Precision: 0.8028, Recall: 0.7739, IoU: 0.6295, Dice:0.7577
+Epoch 24/100
+Training Loss: 0.01734318741775974
+Test Metrics at after Epoch 24: Precision: 0.8362, Recall: 0.6926, IoU: 0.5867, Dice:0.7191
+Epoch 25/100
+Training Loss: 0.017699697558213063
+Test Metrics at after Epoch 25: Precision: 0.8205, Recall: 0.7593, IoU: 0.6317, Dice:0.7618
+Epoch 26/100
+Training Loss: 0.017267238423980848
+Test Metrics at after Epoch 26: Precision: 0.8055, Recall: 0.7940, IoU: 0.6478, Dice:0.7754
+Epoch 27/100
+Training Loss: 0.01885774243397243
+Test Metrics at after Epoch 27: Precision: 0.8700, Recall: 0.6350, IoU: 0.5614, Dice:0.6926
+Epoch 28/100
+Training Loss: 0.018056892263091574
+Test Metrics at after Epoch 28: Precision: 0.8153, Recall: 0.7973, IoU: 0.6577, Dice:0.7808
+Epoch 29/100
+Training Loss: 0.01786180557400891
+Test Metrics at after Epoch 29: Precision: 0.8068, Recall: 0.7267, IoU: 0.5912, Dice:0.7328
+Epoch 30/100
+Training Loss: 0.017953951751361743
+Test Metrics at after Epoch 30: Precision: 0.8345, Recall: 0.7683, IoU: 0.6472, Dice:0.7751
+Epoch 31/100
+Training Loss: 0.017480237856319154
+Test Metrics at after Epoch 31: Precision: 0.8617, Recall: 0.6846, IoU: 0.5937, Dice:0.7282
+Epoch 32/100
+Training Loss: 0.017749234812917434
+Test Metrics at after Epoch 32: Precision: 0.9138, Recall: 0.4886, IoU: 0.4421, Dice:0.5682
+Epoch 33/100
+Training Loss: 0.016967131474027126
+Test Metrics at after Epoch 33: Precision: 0.8755, Recall: 0.6157, IoU: 0.5468, Dice:0.6779
+Epoch 34/100
+Training Loss: 0.017575981448206938
+Test Metrics at after Epoch 34: Precision: 0.7716, Recall: 0.8546, IoU: 0.6746, Dice:0.7920
+Epoch 35/100
+Training Loss: 0.01810986480929635
+Test Metrics at after Epoch 35: Precision: 0.8090, Recall: 0.7485, IoU: 0.6207, Dice:0.7486
+Epoch 36/100
+Training Loss: 0.01612750543375509
+Test Metrics at after Epoch 36: Precision: 0.8509, Recall: 0.6335, IoU: 0.5402, Dice:0.6755
+Epoch 37/100
+Training Loss: 0.016635274867329634
+Test Metrics at after Epoch 37: Precision: 0.8557, Recall: 0.7498, IoU: 0.6501, Dice:0.7729
+Epoch 38/100
+Training Loss: 0.01727186471948193
+Test Metrics at after Epoch 38: Precision: 0.8996, Recall: 0.5996, IoU: 0.5418, Dice:0.6684
+Epoch 39/100
+Training Loss: 0.017064084567016725
+Test Metrics at after Epoch 39: Precision: 0.8766, Recall: 0.6018, IoU: 0.5321, Dice:0.6735
+Epoch 40/100
+Training Loss: 0.016819309405606202
+Test Metrics at after Epoch 40: Precision: 0.8078, Recall: 0.7481, IoU: 0.6166, Dice:0.7467
+Epoch 41/100
+Training Loss: 0.018041646975854583
+Test Metrics at after Epoch 41: Precision: 0.8505, Recall: 0.7364, IoU: 0.6345, Dice:0.7612
+Epoch 42/100
+Training Loss: 0.018130717432182846
+Test Metrics at after Epoch 42: Precision: 0.8572, Recall: 0.7074, IoU: 0.6181, Dice:0.7449
+Epoch 43/100
+Training Loss: 0.01740773342493357
+Test Metrics at after Epoch 43: Precision: 0.9063, Recall: 0.5896, IoU: 0.5349, Dice:0.6624
+Epoch 44/100
+Training Loss: 0.017840200301372643
+Test Metrics at after Epoch 44: Precision: 0.8867, Recall: 0.6298, IoU: 0.5636, Dice:0.6950
+Epoch 45/100
+Training Loss: 0.017896394010144052
+Test Metrics at after Epoch 45: Precision: 0.8306, Recall: 0.7694, IoU: 0.6522, Dice:0.7758
+Epoch 46/100
+Training Loss: 0.017637960382295075
+Test Metrics at after Epoch 46: Precision: 0.8429, Recall: 0.7625, IoU: 0.6500, Dice:0.7739
+Epoch 47/100
+Training Loss: 0.01741075585361081
+Test Metrics at after Epoch 47: Precision: 0.8565, Recall: 0.7363, IoU: 0.6345, Dice:0.7622
+Epoch 48/100
+Training Loss: 0.017433983097417338
+Test Metrics at after Epoch 48: Precision: 0.9044, Recall: 0.6278, IoU: 0.5689, Dice:0.6965
+Epoch 49/100
+Training Loss: 0.017529152592437133
+Test Metrics at after Epoch 49: Precision: 0.8576, Recall: 0.5967, IoU: 0.5221, Dice:0.6614
+Epoch 50/100
+Training Loss: 0.017108637058749945
+Test Metrics at after Epoch 50: Precision: 0.9097, Recall: 0.6754, IoU: 0.6174, Dice:0.7456
+Epoch 51/100
+Training Loss: 0.016837283917185333
+Test Metrics at after Epoch 51: Precision: 0.8381, Recall: 0.8105, IoU: 0.6881, Dice:0.8050
+Epoch 52/100
+Training Loss: 0.016491844271770632
+Test Metrics at after Epoch 52: Precision: 0.8293, Recall: 0.7331, IoU: 0.6124, Dice:0.7420
+Epoch 53/100
+Training Loss: 0.01780751430326038
+Test Metrics at after Epoch 53: Precision: 0.8740, Recall: 0.6359, IoU: 0.5628, Dice:0.6888
+Epoch 54/100
+Training Loss: 0.017541474592166418
+Test Metrics at after Epoch 54: Precision: 0.8787, Recall: 0.6190, IoU: 0.5497, Dice:0.6807
+Epoch 55/100
+Training Loss: 0.01781186774241352
+Test Metrics at after Epoch 55: Precision: 0.8965, Recall: 0.4835, IoU: 0.4279, Dice:0.5772
+Epoch 56/100
+Training Loss: 0.016811542443441924
+Test Metrics at after Epoch 56: Precision: 0.7997, Recall: 0.7884, IoU: 0.6451, Dice:0.7684
+Epoch 57/100
+Training Loss: 0.017160301684693555
+Test Metrics at after Epoch 57: Precision: 0.8638, Recall: 0.6674, IoU: 0.5841, Dice:0.7145
+Epoch 58/100
+Training Loss: 0.01715277401128351
+Test Metrics at after Epoch 58: Precision: 0.8920, Recall: 0.5657, IoU: 0.5039, Dice:0.6284
+Epoch 59/100
+Training Loss: 0.017380984636456376
+Test Metrics at after Epoch 59: Precision: 0.8803, Recall: 0.5401, IoU: 0.4794, Dice:0.6150
+Epoch 60/100
+Training Loss: 0.016312162942168387
+Test Metrics at after Epoch 60: Precision: 0.8095, Recall: 0.7542, IoU: 0.6250, Dice:0.7513
+Epoch 61/100
+Training Loss: 0.01658747727615815
+Test Metrics at after Epoch 61: Precision: 0.8287, Recall: 0.6358, IoU: 0.5421, Dice:0.6720
+Epoch 62/100
+Training Loss: 0.016407151240855455
+Test Metrics at after Epoch 62: Precision: 0.8632, Recall: 0.6823, IoU: 0.6006, Dice:0.7293
+Epoch 63/100
+Training Loss: 0.016881049347270017
+Test Metrics at after Epoch 63: Precision: 0.8391, Recall: 0.7517, IoU: 0.6417, Dice:0.7656
+Epoch 64/100
+Training Loss: 0.01681670622730797
+Test Metrics at after Epoch 64: Precision: 0.8732, Recall: 0.6546, IoU: 0.5780, Dice:0.7065
+Epoch 65/100
+Training Loss: 0.017081196509264034
+Test Metrics at after Epoch 65: Precision: 0.8745, Recall: 0.5890, IoU: 0.5160, Dice:0.6465
+Epoch 66/100
+Training Loss: 0.01695604311452821
+Test Metrics at after Epoch 66: Precision: 0.8950, Recall: 0.3657, IoU: 0.3314, Dice:0.4615
+Epoch 67/100
+Training Loss: 0.018075756691019945
+Test Metrics at after Epoch 67: Precision: 0.9011, Recall: 0.5252, IoU: 0.4777, Dice:0.6148
+Epoch 68/100
+Training Loss: 0.016544133852791004
+Test Metrics at after Epoch 68: Precision: 0.8767, Recall: 0.5782, IoU: 0.5150, Dice:0.6516
+Epoch 69/100
+Training Loss: 0.015934870239685883
+Test Metrics at after Epoch 69: Precision: 0.8364, Recall: 0.7207, IoU: 0.6074, Dice:0.7382
+Epoch 70/100
+Training Loss: 0.01813711188827651
+Test Metrics at after Epoch 70: Precision: 0.8941, Recall: 0.5461, IoU: 0.4906, Dice:0.6254
+Epoch 71/100
+Training Loss: 0.016166036464085782
+Test Metrics at after Epoch 71: Precision: 0.7730, Recall: 0.8280, IoU: 0.6481, Dice:0.7760
+Epoch 72/100
+Training Loss: 0.01687729211213688
+Test Metrics at after Epoch 72: Precision: 0.8786, Recall: 0.6377, IoU: 0.5610, Dice:0.6907
+Epoch 73/100
+Training Loss: 0.01641136333534513
+Test Metrics at after Epoch 73: Precision: 0.8838, Recall: 0.6247, IoU: 0.5506, Dice:0.6834
+Epoch 74/100
+Training Loss: 0.01629222549893188
+Test Metrics at after Epoch 74: Precision: 0.8212, Recall: 0.7702, IoU: 0.6401, Dice:0.7603
+Epoch 75/100
+Training Loss: 0.016514537070473335
+Test Metrics at after Epoch 75: Precision: 0.7988, Recall: 0.7503, IoU: 0.6091, Dice:0.7357
+Epoch 76/100
+Training Loss: 0.016923391796422726
+Test Metrics at after Epoch 76: Precision: 0.8257, Recall: 0.6988, IoU: 0.5910, Dice:0.7276
+Epoch 77/100
+Training Loss: 0.016755866902795704
+Test Metrics at after Epoch 77: Precision: 0.8323, Recall: 0.7681, IoU: 0.6511, Dice:0.7756
+Epoch 78/100
+Training Loss: 0.016357658840151446
+Test Metrics at after Epoch 78: Precision: 0.8759, Recall: 0.6760, IoU: 0.5970, Dice:0.7229
+Epoch 79/100
+Training Loss: 0.016553381081632894
+Test Metrics at after Epoch 79: Precision: 0.8067, Recall: 0.7697, IoU: 0.6296, Dice:0.7585
+Epoch 80/100
+Training Loss: 0.01631120751339077
+Test Metrics at after Epoch 80: Precision: 0.8379, Recall: 0.6378, IoU: 0.5408, Dice:0.6769
+Epoch 81/100
+Training Loss: 0.015904451870933325
+Test Metrics at after Epoch 81: Precision: 0.8105, Recall: 0.7512, IoU: 0.6205, Dice:0.7486
+Epoch 82/100
+Training Loss: 0.016959268938411366
+Test Metrics at after Epoch 82: Precision: 0.8615, Recall: 0.5649, IoU: 0.4929, Dice:0.6205
+Epoch 83/100
+Training Loss: 0.016687694537180543
+Test Metrics at after Epoch 83: Precision: 0.8705, Recall: 0.6442, IoU: 0.5644, Dice:0.6980
+Epoch 84/100
+Training Loss: 0.015996469102442415
+Test Metrics at after Epoch 84: Precision: 0.8777, Recall: 0.6243, IoU: 0.5506, Dice:0.6839
+Epoch 85/100
+Training Loss: 0.015946945791706593
+Test Metrics at after Epoch 85: Precision: 0.8967, Recall: 0.5500, IoU: 0.4928, Dice:0.6165
+Epoch 86/100
+Training Loss: 0.016258816681614125
+Test Metrics at after Epoch 86: Precision: 0.8359, Recall: 0.7846, IoU: 0.6588, Dice:0.7818
+Epoch 87/100
+Training Loss: 0.01730665722579667
+Test Metrics at after Epoch 87: Precision: 0.9304, Recall: 0.4114, IoU: 0.3825, Dice:0.5087
+Epoch 88/100
+Training Loss: 0.01656337860839987
+Test Metrics at after Epoch 88: Precision: 0.8689, Recall: 0.6832, IoU: 0.6025, Dice:0.7312
+Epoch 89/100
+Training Loss: 0.01643389450489647
+Test Metrics at after Epoch 89: Precision: 0.7931, Recall: 0.8060, IoU: 0.6573, Dice:0.7803
+Epoch 90/100
+Training Loss: 0.01679776099538713
+Test Metrics at after Epoch 90: Precision: 0.8295, Recall: 0.7997, IoU: 0.6721, Dice:0.7950
+Epoch 91/100
+Training Loss: 0.01683064094377738
+Test Metrics at after Epoch 91: Precision: 0.8094, Recall: 0.8210, IoU: 0.6716, Dice:0.7938
+Epoch 92/100
+Training Loss: 0.016048224454726836
+Test Metrics at after Epoch 92: Precision: 0.8215, Recall: 0.7906, IoU: 0.6570, Dice:0.7813
+Epoch 93/100
+Training Loss: 0.016211454935296618
+Test Metrics at after Epoch 93: Precision: 0.8708, Recall: 0.6539, IoU: 0.5754, Dice:0.6969
+Epoch 94/100
+Training Loss: 0.01616837444122542
+Test Metrics at after Epoch 94: Precision: 0.8695, Recall: 0.6668, IoU: 0.5875, Dice:0.7137
+Epoch 95/100
+Training Loss: 0.016418516650005724
+Test Metrics at after Epoch 95: Precision: 0.8424, Recall: 0.7712, IoU: 0.6588, Dice:0.7832
+Epoch 96/100
+Training Loss: 0.01652556849229667
+Test Metrics at after Epoch 96: Precision: 0.8409, Recall: 0.6550, IoU: 0.5667, Dice:0.6982
+Epoch 97/100
+Training Loss: 0.016850952331842195
+Test Metrics at after Epoch 97: Precision: 0.8771, Recall: 0.6502, IoU: 0.5790, Dice:0.7018
+Epoch 98/100
+Training Loss: 0.016101120322039635
+Test Metrics at after Epoch 98: Precision: 0.8162, Recall: 0.7217, IoU: 0.6103, Dice:0.7343
+Epoch 99/100
+Training Loss: 0.016754212798644797
+Test Metrics at after Epoch 99: Precision: 0.8414, Recall: 0.6718, IoU: 0.5811, Dice:0.7137
+Epoch 100/100
+Training Loss: 0.017423854519923527
+Test Metrics at after Epoch 100: Precision: 0.8581, Recall: 0.7279, IoU: 0.6332, Dice:0.7588
+Test Metrics: Precision: 0.8581, Recall: 0.7279, IoU: 0.6332, Dice: 0.7588
+Training and evaluation complete!
+Model saved after epoch 100 to /home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/COMBINED_singleconvolayer_50.pth
+=== JOB_STATISTICS ===
+=== current date     : Mon 28 Oct 2024 10:19:08 AM CET
+= Job-ID             : 922533 on tinygpu
+= Job-Name           : FPN_combined_single_nonfixed_4_lessLR
+= Job-Command        : /home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL/fpn_normal.sh
+= Initial workdir    : /home/hpc/iwso/iwso151h/FPN_GLOBAL_LOCAL
+= Queue/Partition    : work
+= Slurm account      : iwso with QOS=normal
+= Requested resources:  for 1-00:00:00
+= Elapsed runtime    : 02:52:01
+= Total RAM usage    : 1.7 GiB of requested  GiB (%)   
+= Node list          : tg06b
+= Subm/Elig/Start/End: 2024-10-28T07:27:06 / 2024-10-28T07:27:06 / 2024-10-28T07:27:07 / 2024-10-28T10:19:08
+======================
+=== Quota infos ======
+    Path              Used     SoftQ    HardQ    Gracetime  Filec    FileQ    FiHaQ    FileGrace    
+    /home/hpc           87.4G   104.9G   209.7G        N/A     132K     500K   1,000K        N/A    
+    /home/woody        152.2M  1000.0G  1500.0G        N/A      16    5,000K   7,500K        N/A    
+======================
+=== GPU utilization ==
+gpu_name, gpu_bus_id, pid, gpu_utilization [%], mem_utilization [%], max_memory_usage [MiB], time [ms]
+NVIDIA GeForce RTX 2080 Ti, 00000000:3B:00.0, 3621961, 46 %, 32 %, 10354 MiB, 10289242 ms
